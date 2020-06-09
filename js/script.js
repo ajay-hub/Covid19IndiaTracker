@@ -109,8 +109,15 @@
 function fn()
         {
             var select = document.getElementById('select').value;
-            localStorage.setItem("sname", select); 
-            window.open('statestats.html', '_blank'); 
+            localStorage.setItem("sname", select);
+            if(select!="default")
+            {
+                window.open('statestats.html', '_blank'); 
+            } 
+            else
+            {
+                window.alert("Please select a state!");
+            }
         }
 
 buildTable() 
